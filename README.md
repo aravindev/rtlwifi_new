@@ -20,13 +20,22 @@ and note down the wl* number.
 2. Download new driver.
 3. Again in Terminal type and run:
 `cd Desktop/rtlwifi_new`
+
 `make`
+
 `sudo make install` type your ubuntu password.
+
 `sudo modprobe -rv rtl8723be`
+
 `sudo modprobe -v rtl8723be ant_sel=2`
+
 `sudo ip link set wl* up` use your wl* number.
+
 `sudo iw dev wl* scan` same.
+
 To make the settings permanent, type below command
+
 `echo "options rtl8723be ant_sel=2" | sudo tee /etc/modprobe.d/50-rtl8723be.conf`
+
 Note: After your OS (Kernel) update, you need to apply these settings again to get strong signal.
 
